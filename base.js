@@ -12,6 +12,21 @@ context.lineTo(0, canvas.height);
 context.closePath();
 context.stroke();
 
+context.beginPath();
+context.moveTo(1, 0);
+context.lineTo(3, 0);
+context.closePath();
+context.stroke();
+
+context.beginPath();
+context.moveTo(1, canvas.height);
+context.lineTo(3, canvas.height);
+context.closePath();
+context.stroke();
+
+context.fillText(' '+1, 4, 7);
+context.fillText(-1, 4, canvas.height);
+
 var clockwise = true;
 
 context.beginPath();
