@@ -26,6 +26,7 @@ context.stroke();
 
 context.fillText(' '+1, 4, 7);
 context.fillText(-1, 4, canvas.height);
+context.fillText(' '+0, 4, canvas.height/2)
 
 var clockwise = true;
 
