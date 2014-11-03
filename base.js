@@ -28,12 +28,19 @@ context.fillText(' '+1, 4, 7);
 context.fillText(-1, 4, canvas.height);
 context.fillText(' '+0, 4, canvas.height/2)
 
-for (var i = RADIUS; i < canvas.width; i += RADIUS) {
+for (var i = RADIUS, angle = 1/2; i < canvas.width; i += RADIUS, angle += 1/2) {
 	context.beginPath();
 	context.moveTo(i, canvas.height/2+1);
 	context.lineTo(i, canvas.height/2+3);
 	context.closePath();
 	context.stroke();
+
+	var denominator = (angle - Math.floor(angle) === 0.5),
+		numerator = (denominator ? angle*2 : angle),
+
+		piStr = (numerator !== 1 && numerator ? numerator : '') + '\u03C0' + (denominator ? '/2' : '');
+
+	context.fillText(piStr, i+2, canvas.height/2+9);
 }
 
 var clockwise = true;
