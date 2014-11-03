@@ -10,7 +10,7 @@ var canvas = document.getElementById('graph'),
 
 for (var i = 0; i < canvas.width; i += DIAMETER) {
 	context.arc(i+RADIUS, canvas.height/2, RADIUS, 0, Math.PI, clockwise);
-	context.stroke();
-
 	clockwise = ! clockwise;
 }
+
+context.stroke();
